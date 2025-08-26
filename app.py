@@ -2,12 +2,15 @@ import streamlit as st
 from openai import AzureOpenAI
 import os
 from dotenv import load_dotenv
+import os
 
+# Load environment variables from .env file
+load_dotenv()
 # ----------------------------
 # 🔑 Azure OpenAI credentials
 # ----------------------------
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_KEY = os.getenv("AZURE_API_KEY")
+AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
 DEPLOYMENT_NAME = "gpt-35-turbo-0125-ft-610877ae39ff4995b94346d1147748dd"
 
 # ----------------------------
